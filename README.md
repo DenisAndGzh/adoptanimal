@@ -7,7 +7,7 @@ Welcome to Adoptanimal, we're all about getting homeless pets into homes.
 
 ## Technology Stack
 
-Html/Css, Vue3, Node.js, TypeScript, Vue-Router, Pinia, Vitest, Cypress, Mysql/PostgreSQL
+Html/Css, Vue3, Node.js, Vite, TypeScript, Vue-Router, Pinia, Vitest, Cypress, Mysql/PostgreSQL
 
 ## Website Address
 
