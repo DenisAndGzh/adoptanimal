@@ -7,7 +7,16 @@ Welcome to Adoptanimal, we're all about getting homeless pets into homes.
 
 ## Technology Stack
 
-Html/Css, Vue3, Node.js, Vite, TypeScript, Vue-Router, Pinia, Vitest, Cypress, Mysql/PostgreSQL
+Html/Css, Vue3, Node.js, Express, Vite, TypeScript, Vue-Router, Pinia, Vitest, Cypress, Mysql
+
+## Architecture
+
+Vue3 + Node.js + Express + Database
+
+![Architecture](https://www.bezkoder.com/wp-content/uploads/2019/12/vue-node-express-mysql-architecture.png)
+
+* Node.js Express exports REST APIs & interacts with MySQL Database using Sequelize ORM.  
+* Vue Client sends HTTP Requests and retrieves HTTP Responses using axios, consume data on the components. Vue Router is used for navigating to pages.  
 
 ## Website Address
 
