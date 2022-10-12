@@ -1,7 +1,11 @@
 <template>
-  <div>Contact Me</div>
+  <div>
+    <MessageTable></MessageTable>
+  </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import MessageTable from "../components/MessageTable.vue";
+</script>
 
 <style lang="scss" scoped></style>

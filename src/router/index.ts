@@ -42,6 +42,14 @@ const router = createRouter({
           },
           component: () => import("../views/ContactView.vue"),
         },
+        {
+          path: "donate",
+          name: "donate",
+          meta: {
+            title: "Donate",
+          },
+          component: () => import("../views/DonateView.vue"),
+        },
       ],
     },
   ],

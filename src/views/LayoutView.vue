@@ -6,8 +6,8 @@ const $router = useRouter();
 const onClick_Donate = () => {
   $router.push({ path: "/donate" });
 };
-const onClick_Mail = () => {
-  $router.push({ path: "/contact" });
+const onClick_Login = () => {
+  $router.push({ path: "/login" });
 };
 </script>
 
@@ -63,8 +63,8 @@ const onClick_Mail = () => {
                   padding="5px"
                   color="white"
                   text-color="primary"
-                  @click="onClick_Mail"
-                  icon="mail"
+                  @click="onClick_Login"
+                  icon="fa-solid fa-user"
                 />
                 <q-fab-action
                   padding="5px"
