@@ -92,7 +92,7 @@ const onClick_Mail = () => {
         <div class="col-6">
           <q-toolbar>
             <q-toolbar-title class="text-center FooterCustomStyle">
-              <font size="3">Copyright © 2022 Adopt Animal</font>
+              <span style="font-size: 15px">Copyright © 2022 Adopt Animal</span>
             </q-toolbar-title>
           </q-toolbar>
         </div>
