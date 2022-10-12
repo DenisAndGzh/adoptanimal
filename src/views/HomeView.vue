@@ -106,7 +106,7 @@
                 label="Adopt"
                 :style="'background: red; color: white'"
               /><br />
-              <br /><br />
+              <br />
               <br />
             </h3>
           </div>
