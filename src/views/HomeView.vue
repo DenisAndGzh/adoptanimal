@@ -12,7 +12,7 @@
           control-color="secondary"
           autoplay
           v-model="slide"
-          height="460px"
+          height="440px"
         >
           <q-carousel-slide
             class="q-pa-none"
@@ -44,12 +44,14 @@
               style="margin: 40px"
             >
               <q-card-section>
-                <q-icon size="140px" name="pets" color="secondary" />
-                <div class="text-h6">Multiple Choices</div>
-              </q-card-section>
+                <q-card-section>
+                  <q-icon size="140px" name="pets" color="secondary" />
+                  <div class="text-h6">Multiple Choices</div>
+                </q-card-section>
 
-              <q-card-section class="q-pt-none">
-                We have a variety of pets for people to adopt.
+                <q-card-section class="q-pt-none">
+                  We have a variety of pets for people to adopt.
+                </q-card-section>
               </q-card-section>
             </q-card>
           </div>
@@ -59,32 +61,35 @@
               style="margin: 40px"
             >
               <q-card-section>
-                <q-icon size="140px" name="thumb_up" color="secondary" />
-                <div class="text-h6">Good Reputation</div>
-              </q-card-section>
+                <q-card-section>
+                  <q-icon size="140px" name="thumb_up" color="secondary" />
+                  <div class="text-h6">Good Reputation</div>
+                </q-card-section>
 
-              <q-card-section class="q-pt-none">
-                We have a solid reputation for pet adoption.
-              </q-card-section>
+                <q-card-section class="q-pt-none">
+                  We have a solid reputation for pet adoption.
+                </q-card-section></q-card-section
+              >
             </q-card>
           </div>
           <div class="col">
             <q-card
               class="q-pa-sm flex flex-center text-center box-shadow"
               style="margin: 40px"
-            >
-              <q-card-section>
-                <q-icon
-                  size="140px"
-                  name="volunteer_activism"
-                  color="secondary"
-                />
-                <div class="text-h6">Non-Profit</div>
-              </q-card-section>
+              ><q-card-section>
+                <q-card-section>
+                  <q-icon
+                    size="140px"
+                    name="volunteer_activism"
+                    color="secondary"
+                  />
+                  <div class="text-h6">Non-Profit</div>
+                </q-card-section>
 
-              <q-card-section class="q-pt-none">
-                We are a good non-profit organization.
-              </q-card-section>
+                <q-card-section class="q-pt-none">
+                  We are a good non-profit organization.
+                </q-card-section></q-card-section
+              >
             </q-card>
           </div>
         </div>
@@ -104,7 +109,7 @@
                 to="/adopt"
                 size="lg"
                 label="Adopt"
-                :style="'background: red; color: white'"
+                color="red-9"
               /><br />
               <br />
               <br />
@@ -160,8 +165,8 @@
                   <q-btn
                     label="Reset"
                     type="reset"
-                    color="primary"
-                    flat
+                    color="blue-grey-5"
+                    
                     class="q-ml-sm"
                   />
                 </div>
