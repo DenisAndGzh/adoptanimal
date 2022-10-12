@@ -16,8 +16,11 @@ export default defineConfig({
       sassVariables: "src/quasar-variables.sass",
     }),
     AutoImport({
+      eslintrc: {
+        enabled: true,
+      },
       imports: ["vue"],
-      dts: "./auto-import.d.ts",
+      dts: true,
     }),
   ],
   resolve: {
