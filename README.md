@@ -9,8 +9,6 @@ Welcome to Adoptanimal, we're all about getting homeless pets into homes.
 
 HTML/css, Vue3, Node.js, Express, Vite, TypeScript, Vue-Router, Pinia, Vitest, Cypress, Mysql
 
-Third Party Library: unplugin-auto-import
-
 ## Architecture
 
 Vue3 + Node.js + Express + Database
