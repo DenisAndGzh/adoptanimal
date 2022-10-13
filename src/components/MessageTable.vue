@@ -14,7 +14,9 @@
           v-model="name"
           label="Your name *"
           lazy-rules
-          :rules="[(val) => (val && val.length > 0) || 'Please type something']"
+          :rules="[
+            (val) => (val && val.length > 0) || 'Please write your name',
+          ]"
         />
 
         <q-input
@@ -23,7 +25,9 @@
           v-model="email"
           label="Your Email *"
           lazy-rules
-          :rules="[(val) => (val && val.length > 0) || 'Please type something']"
+          :rules="[
+            (val) => (val && val.length > 0) || 'Please write your emael',
+          ]"
         />
         <q-input
           style="background-position: center"
@@ -32,7 +36,9 @@
           label="Your message *"
           type="textarea"
           lazy-rules
-          :rules="[(val) => (val && val.length > 0) || 'Please type something']"
+          :rules="[
+            (val) => (val && val.length > 0) || 'Please write your messages',
+          ]"
         />
         <div class="row">
           <div class="col-6 text-center">
