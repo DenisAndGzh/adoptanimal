@@ -64,7 +64,7 @@
         <div class="text-h6">Your message was successfully submitted</div>
       </q-card-section>
       <q-card-section style="max-height: 50vh" class="scroll" horizontal>
-        <div style="white-space: pre-wrap; padding: 15px">
+        <div style="white-space: pre-wrap; width: 100%; padding: 15px">
           <div class="row">
             <div class="col-6">Your Name: {{ message.name }}</div>
             <div class="col-6">Your Email: {{ message.email }}</div>
