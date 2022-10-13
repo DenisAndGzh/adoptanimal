@@ -1,16 +1,3 @@
-<script setup lang="ts">
-import { useRouter } from "vue-router";
-const text = ref("");
-const $router = useRouter();
-
-const onClick_Donate = () => {
-  $router.push({ path: "/donate" });
-};
-const onClick_Login = () => {
-  $router.push({ path: "/login" });
-};
-</script>
-
 <template>
   <q-layout view="hHh LpR fff">
     <q-header container reveal :reveal-offset="1" class="bg-primary text-white">
@@ -116,6 +103,19 @@ const onClick_Login = () => {
     </q-footer>
   </q-layout>
 </template>
+
+<script setup lang="ts">
+import { useRouter } from "vue-router";
+const text = ref("");
+const $router = useRouter();
+
+const onClick_Donate = () => {
+  $router.push({ path: "/donate" });
+};
+const onClick_Login = () => {
+  $router.push({ path: "/login" });
+};
+</script>
 
 <style lang="scss" scoped>
 .FooterCustomStyle {
