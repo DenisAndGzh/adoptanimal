@@ -11,7 +11,7 @@
       >
         <q-input
           filled
-          v-model="name"
+          v-model="message.name"
           label="Your name *"
           lazy-rules
           :rules="[
@@ -22,7 +22,7 @@
         <q-input
           filled
           type="email"
-          v-model="email"
+          v-model="message.email"
           label="Your Email *"
           lazy-rules
           :rules="[
@@ -31,7 +31,7 @@
         />
         <q-input
           style="background-position: center"
-          v-model="text"
+          v-model="message.text"
           filled
           label="Your message *"
           type="textarea"
@@ -64,8 +64,15 @@
         <div class="text-h6">Your message was successfully submitted</div>
       </q-card-section>
       <q-card-section style="max-height: 50vh" class="scroll" horizontal>
-        <div style="white-space: pre-wrap">
-          {{ print_text(myForm.text) }}
+        <div style="white-space: pre-wrap; padding: 15px">
+          <div class="row">
+            <div class="col-6">Your Name: {{ message.name }}</div>
+            <div class="col-6">Your Email: {{ message.email }}</div>
+          </div>
+          <div>Your Messssage:</div>
+          <div>
+            {{ print_text(message.text) }}
+          </div>
         </div>
       </q-card-section>
 
@@ -77,28 +84,22 @@
 </template>
 
 <script setup lang="ts">
-type props = {
-  name: string;
-  email: string;
-  text: string;
-};
-const flag = ref(false);
-const name = ref(null);
-const email = ref(null);
-const text = ref(null);
+import { useMessageStore } from "@/stores/message";
+const message = useMessageStore();
 
-const myForm = ref<props>({ name: "", email: "", text: "" });
+const flag = ref(false);
+
 const onSubmit = (e: Event | SubmitEvent) => {
   const arr = [...(e.target as any)];
-  myForm.value.name = arr[0].value;
-  myForm.value.email = arr[1].value;
-  myForm.value.text = arr[2].value;
+  message.name = arr[0].value;
+  message.email = arr[1].value;
+  message.text = arr[2].value;
   flag.value = !flag.value;
 };
 const onReset = () => {
-  name.value = null;
-  email.value = null;
-  text.value = null;
+  message.name = "";
+  message.email = "";
+  message.text = "";
 };
 
 const print_text = (str: string) => {
