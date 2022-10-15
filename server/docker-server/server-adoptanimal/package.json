@@ -1,7 +1,7 @@
 {
-  "name": "nodejs-express-sequelize-mysql",
+  "name": "adoptanimal-docker-server",
   "version": "1.0.0",
-  "description": "Node.js Rest Apis with Express, Sequelize & MySQL",
+  "description": "docker backend server for Adopt Animal",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,8 +14,8 @@
     "sequelize",
     "mysql"
   ],
-  "author": "bezkoder",
-  "license": "ISC",
+  "author": "spbgzh",
+  "license": "MIT",
   "dependencies": {
     "dotenv": "^10.0.0",
     "cors": "^2.8.5",

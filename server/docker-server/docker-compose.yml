@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  mysqldb:
+  mysql:
     image: mysql 
     restart: unless-stopped
     build: ./database
@@ -13,16 +13,16 @@ services:
       - $MYSQLDB_LOCAL_PORT:$MYSQLDB_DOCKER_PORT
     volumes:
       - db:/var/lib/mysql
-  app:
+  node:
     depends_on:
-      - mysqldb
+      - mysql
     build: ./server-adoptanimal
     restart: unless-stopped
     env_file: ./.env
     ports:
       - $NODE_LOCAL_PORT:$NODE_DOCKER_PORT
     environment:
-      - DB_HOST=mysqldb
+      - DB_HOST=mysql
       - DB_USER=$MYSQLDB_USER
       - DB_PASSWORD=$MYSQLDB_ROOT_PASSWORD
       - DB_NAME=$MYSQLDB_DATABASE
