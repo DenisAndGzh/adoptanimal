@@ -90,14 +90,23 @@ const message = useMessageStore();
 
 const flag = ref(false);
 
-const onSubmit = (e: Event | SubmitEvent) => {
+const onSubmit = async (e: Event | SubmitEvent) => {
   const arr = [...(e.target as any)];
-  flag.value = !flag.value;
   message.name = arr[0].value;
   message.email = arr[1].value;
   message.message = arr[2].value;
-
-  axios.post("http://localhost:6868/api/msg", message);
+  try {
+    const result = await axios.post("http://localhost:6868/api/msg", message);
+    console.log(result);
+    if (result.status == 200) {
+      flag.value = !flag.value;
+    } else {
+      alert("Fail to send message");
+    }
+  } catch (e) {
+    alert("Fail to send message");
+    console.log(e);
+  }
 };
 const onReset = () => {
   message.name = "";

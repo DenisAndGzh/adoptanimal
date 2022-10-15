@@ -22,6 +22,11 @@ app.use(
 app.get("/", (req, res) => {
   res.json({ message: "This is backend server for Adopt Animal." });
 });
+app.get("/api", (req, res) => {
+  res.json({
+    message: "You can choose following api to use: /animal /img /msg.",
+  });
+});
 
 require("./app/routes/animal.routes.js")(app);
 require("./app/routes/image.routes.js")(app);
