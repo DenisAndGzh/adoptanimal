@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 });
 app.get("/api", (req, res) => {
   res.json({
-    message: "You can choose following api to use: /animal /img /msg.",
+    message: "We provide the following apis: /api/animal /api/img /api/msg.",
   });
 });
 
