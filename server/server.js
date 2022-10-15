@@ -20,11 +20,11 @@ app.use(
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to bezkoder application." });
+  res.json({ message: "This is backend server for Adopt Animal." });
 });
 
 require("./app/routes/animal.routes.js")(app);
-
+require("./app/routes/image.routes.js")(app);
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {

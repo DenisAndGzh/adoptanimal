@@ -9,7 +9,7 @@ exports.create = (req, res) => {
     });
   }
   // Create a Animal
-  const tutorial = new Animal({
+  const animal = new Animal({
     name: req.body.name,
     type: req.body.type,
     age: req.body.age,
@@ -22,7 +22,7 @@ exports.create = (req, res) => {
   });
 
   // Save Animal in the database
-  Animal.create(tutorial, (err, data) => {
+  Animal.create(animal, (err, data) => {
     if (err)
       res.status(500).send({
         message:
@@ -39,8 +39,7 @@ exports.findAll = (req, res) => {
   Animal.getAll(title, (err, data) => {
     if (err)
       res.status(500).send({
-        message:
-          err.message || "Some error occurred while retrieving tutorials.",
+        message: err.message || "Some error occurred while retrieving Animals.",
       });
     else res.send(data);
   });
@@ -107,12 +106,12 @@ exports.delete = (req, res) => {
 };
 
 // Delete all Animals from the database.
-exports.deleteAll = (req, res) => {
+exports.deleteAll = (_req, res) => {
   Animal.removeAll((err) => {
     if (err)
       res.status(500).send({
         message:
-          err.message || "Some error occurred while removing all tutorials.",
+          err.message || "Some error occurred while removing all Animals.",
       });
     else res.send({ message: `All Animals were deleted successfully!` });
   });
