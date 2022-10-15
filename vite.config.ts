@@ -19,7 +19,7 @@ export default defineConfig({
       eslintrc: {
         enabled: true,
       },
-      imports: ["vue"],
+      imports: ["vue", "vue-router"],
       dts: true,
     }),
   ],

@@ -1,9 +1,7 @@
-<script setup lang="ts">
-import { RouterView } from "vue-router";
-</script>
-
 <template>
   <RouterView class="bg-secondary"></RouterView>
 </template>
+
+<script setup lang="ts"></script>
 
 <style scoped></style>

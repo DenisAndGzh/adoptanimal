@@ -31,6 +31,17 @@ The backend server consists of **nodejs** + **express** + **mysql**
 | DELETE  | /api/img/:id | Delete Image by *id* |
 | DELETE  | /api/img     | Delete all Images    |
 
+### Message Api
+
+| Methods | Urls         | Actions                |
+|---------|--------------|------------------------|
+| GET     | /api/msg     | Get all Message        |
+| GET     | /api/msg/:id | Get Message by *id*    |
+| POST    | /api/msg     | Add new Message        |
+| PUT     | /api/msg/:id | Update Message by *id* |
+| DELETE  | /api/msg/:id | Delete Message by *id* |
+| DELETE  | /api/msg     | Delete all Message     |
+
 ## Database
 
 ### Tabel: animal
@@ -56,3 +67,12 @@ The backend server consists of **nodejs** + **express** + **mysql**
 | acgurl | varchar |     |
 | width  | int     |     |
 | height | int     |     |
+
+### Tabel: message
+
+| Name    | Tpye    | Key |
+|---------|---------|-----|
+| id      | int     | PRI |
+| name    | varchar |     |
+| email   | varchar |     |
+| message | varchar |     |

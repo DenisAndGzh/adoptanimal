@@ -2,8 +2,14 @@
 
 To connect to the database, you need to modify the *.env* and *.env.sample* file
 
-## Server Run
+## Server Build
 
 ```bash
 docker-compose up -d
+```
+
+## Server Rebuild
+
+```bash
+docker-compose up -d --build
 ```

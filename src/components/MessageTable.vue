@@ -31,7 +31,7 @@
         />
         <q-input
           style="background-position: center"
-          v-model="message.text"
+          v-model="message.message"
           filled
           label="Your message *"
           type="textarea"
@@ -71,7 +71,7 @@
           </div>
           <div>Your Messssage:</div>
           <div>
-            {{ print_text(message.text) }}
+            {{ print_text(message.message) }}
           </div>
         </div>
       </q-card-section>
@@ -85,21 +85,24 @@
 
 <script setup lang="ts">
 import { useMessageStore } from "@/stores/message";
+import axios from "axios";
 const message = useMessageStore();
 
 const flag = ref(false);
 
 const onSubmit = (e: Event | SubmitEvent) => {
   const arr = [...(e.target as any)];
+  flag.value = !flag.value;
   message.name = arr[0].value;
   message.email = arr[1].value;
-  message.text = arr[2].value;
-  flag.value = !flag.value;
+  message.message = arr[2].value;
+
+  axios.post("http://localhost:6868/api/msg", message);
 };
 const onReset = () => {
   message.name = "";
   message.email = "";
-  message.text = "";
+  message.message = "";
 };
 
 const print_text = (str: string) => {
