@@ -43,7 +43,6 @@ npm run server
 
 ### Tabel: animal
 
-
 | Name        | Tpye    | Key |
 |-------------|---------|-----|
 | id          | int     | PRI |
@@ -57,14 +56,11 @@ npm run server
 | city        | varchar |     |
 | description | varchar |     |
 
-
 ### Tabel: image
+
 | Name   | Tpye    | Key |
 |--------|---------|-----|
 | id     | int     | PRI |
 | acgurl | varchar |     |
 | width  | int     |     |
 | height | int     |     |
-
-
-
