@@ -4,8 +4,8 @@ The backend server consists of **nodejs** + **express** + **mysql**
 
 ## Server Type
 
-1. Docker Server
-2. pm2 + Local Mysql
+1. Docker Server (Include node + mysql)
+2. pm2 + Local Mysql (need to configure yourself)
 
 ## API
 
