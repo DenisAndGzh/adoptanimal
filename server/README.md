@@ -1,19 +1,11 @@
 # Adopt Animal Backend Server
 
 The backend server consists of **nodejs** + **express** + **mysql**  
-To connect to the database, you need to modify the *db.config.js* file
 
-## Project setup
+## Server Type
 
-```bash
-npm install
-```
-
-## Run Script
-
-```bash
-npm run server
-```
+1. Docker Server
+2. pm2 + Local Mysql
 
 ## API
 
