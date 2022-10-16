@@ -90,11 +90,7 @@ const message = useMessageStore();
 
 const flag = ref(false);
 
-const onSubmit = async (e: Event | SubmitEvent) => {
-  const arr = [...(e.target as any)];
-  message.name = arr[0].value;
-  message.email = arr[1].value;
-  message.message = arr[2].value;
+const onSubmit = async () => {
   try {
     const result = await axios.post(
       "http://47.92.133.39:6868/api/msg",
