@@ -114,17 +114,18 @@ const onReset = () => {
 };
 
 const print_text = (str: string) => {
-  let new_srt: string = "";
+  let new_str: string = "";
   let num = 0;
   for (let i = 0; i < str.length; i++) {
-    new_srt += str.charAt(i);
+    new_str += str.charAt(i);
     num += 1;
     if (num === 86) {
-      new_srt += "\n";
+      new_str += "\n";
       num = 0;
     }
+    if (i === 300) break;
   }
-  return new_srt;
+  return new_str;
 };
 </script>
 
