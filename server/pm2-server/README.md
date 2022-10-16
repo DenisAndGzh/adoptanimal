@@ -1,6 +1,6 @@
 # PM2 + Local Mysql Server
 
-To connect to the database, you need to modify the *db.config.js* file 
+To connect to the database, you need to modify the _db.config.js_ file
 
 ## Project setup
 

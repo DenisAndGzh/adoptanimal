@@ -1,4 +1,4 @@
-# Adoptanimal  
+# Adoptanimal
 
 ## Introduction
 
@@ -22,7 +22,7 @@ Guo ZiHan / Го Цзыхань
 
 HTML/css, Vue3, Node.js, Express, Vite, TypeScript, Vue-Router, Pinia, Vitest, Cypress, Mysql
 
-Third Partiy Libraries: unplugin-auto-import, pm2  
+Third Partiy Libraries: unplugin-auto-import, pm2
 
 ## Architecture
 
@@ -30,5 +30,5 @@ Vue3 + Node.js + Express + Database
 
 ![Architecture](https://www.bezkoder.com/wp-content/uploads/2019/12/vue-node-express-mysql-architecture.png)
 
-* Node.js Express exports REST APIs & interacts with MySQL Database using *query()* method to execute MySQL script: INSERT, SELECT, UPDATE, DELETE.  
-* Vue Client sends HTTP Requests and retrieves HTTP Responses using axios, consume data on the components. Vue Router is used for navigating to pages.  
+- Node.js Express exports REST APIs & interacts with MySQL Database using _query()_ method to execute MySQL script: INSERT, SELECT, UPDATE, DELETE.
+- Vue Client sends HTTP Requests and retrieves HTTP Responses using axios, consume data on the components. Vue Router is used for navigating to pages.

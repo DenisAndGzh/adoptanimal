@@ -1,6 +1,6 @@
 # Adopt Animal Docker Server
 
-To connect to the database, you need to modify the *.env* and *.env.sample* file
+To connect to the database, you need to modify the _.env_ and _.env.sample_ file
 
 ## Server Build
 

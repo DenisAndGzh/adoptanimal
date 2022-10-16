@@ -1,6 +1,6 @@
 # Adopt Animal Backend Server
 
-The backend server consists of **nodejs** + **express** + **mysql**  
+The backend server consists of **nodejs** + **express** + **mysql**
 
 ## Server Type
 
@@ -12,34 +12,34 @@ The backend server consists of **nodejs** + **express** + **mysql**
 ### Animal Api
 
 | Methods | Urls            | Actions               |
-|---------|-----------------|-----------------------|
+| ------- | --------------- | --------------------- |
 | GET     | /api/animal     | Get all Animal        |
-| GET     | /api/animal/:id | Get Animal by *id*    |
+| GET     | /api/animal/:id | Get Animal by _id_    |
 | POST    | /api/animal     | Add new Animal        |
-| PUT     | /api/animal/:id | Update Animal by *id* |
-| DELETE  | /api/animal/:id | Delete Animal by *id* |
+| PUT     | /api/animal/:id | Update Animal by _id_ |
+| DELETE  | /api/animal/:id | Delete Animal by _id_ |
 | DELETE  | /api/animal     | Delete all Animal     |
 
 ### Image Api
 
 | Methods | Urls         | Actions              |
-|---------|--------------|----------------------|
+| ------- | ------------ | -------------------- |
 | GET     | /api/img     | Get all Images       |
-| GET     | /api/img/:id | Get Image by *id*    |
+| GET     | /api/img/:id | Get Image by _id_    |
 | POST    | /api/img     | Add new Image        |
-| PUT     | /api/img/:id | Update Image by *id* |
-| DELETE  | /api/img/:id | Delete Image by *id* |
+| PUT     | /api/img/:id | Update Image by _id_ |
+| DELETE  | /api/img/:id | Delete Image by _id_ |
 | DELETE  | /api/img     | Delete all Images    |
 
 ### Message Api
 
 | Methods | Urls         | Actions                |
-|---------|--------------|------------------------|
+| ------- | ------------ | ---------------------- |
 | GET     | /api/msg     | Get all Message        |
-| GET     | /api/msg/:id | Get Message by *id*    |
+| GET     | /api/msg/:id | Get Message by _id_    |
 | POST    | /api/msg     | Add new Message        |
-| PUT     | /api/msg/:id | Update Message by *id* |
-| DELETE  | /api/msg/:id | Delete Message by *id* |
+| PUT     | /api/msg/:id | Update Message by _id_ |
+| DELETE  | /api/msg/:id | Delete Message by _id_ |
 | DELETE  | /api/msg     | Delete all Message     |
 
 ## Database
@@ -47,7 +47,7 @@ The backend server consists of **nodejs** + **express** + **mysql**
 ### Tabel: animal
 
 | Name        | Tpye    | Key |
-|-------------|---------|-----|
+| ----------- | ------- | --- |
 | id          | int     | PRI |
 | name        | varchar |     |
 | type        | varchar |     |
@@ -62,7 +62,7 @@ The backend server consists of **nodejs** + **express** + **mysql**
 ### Tabel: image
 
 | Name   | Tpye    | Key |
-|--------|---------|-----|
+| ------ | ------- | --- |
 | id     | int     | PRI |
 | acgurl | varchar |     |
 | width  | int     |     |
@@ -71,7 +71,7 @@ The backend server consists of **nodejs** + **express** + **mysql**
 ### Tabel: message
 
 | Name    | Tpye    | Key |
-|---------|---------|-----|
+| ------- | ------- | --- |
 | id      | int     | PRI |
 | name    | varchar |     |
 | email   | varchar |     |
