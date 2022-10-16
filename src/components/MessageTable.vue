@@ -92,7 +92,7 @@ const flag = ref(false);
 
 const onSubmit = () => {
   try {
-    axios.post("http://47.92.133.39:6868/api/msg", Message.$state).then((e) => {
+    axios.post("https://47.92.133.39:6868/api/msg", Message.$state).then((e) => {
       if (e.status === 200) {
         flag.value = !flag.value;
       } else {
