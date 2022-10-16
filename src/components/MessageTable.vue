@@ -92,19 +92,15 @@ const flag = ref(false);
 
 const onSubmit = () => {
   try {
-    console.log(Message.$state);
-
-    axios.post("http://47.92.133.39:6868/api/msg", Message).then((e) => {
-      console.log(1111111);
+    axios.post("http://47.92.133.39:6868/api/msg", Message.$state).then((e) => {
       if (e.status === 200) {
-        console.log(2222222);
         flag.value = !flag.value;
       } else {
-        console.log(3333333);
         alert("Fail to send message");
       }
     });
   } catch (e) {
+    console.error(e);
     alert("Fail to send message");
   }
 };
