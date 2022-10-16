@@ -11,7 +11,6 @@
     "express",
     "rest",
     "api",
-    "sequelize",
     "mysql"
   ],
   "author": "spbgzh",
@@ -20,7 +19,6 @@
     "dotenv": "^10.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mysql2": "^2.0.2",
-    "sequelize": "^5.21.2"
+    "mysql2": "^2.0.2"
   }
 }
