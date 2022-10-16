@@ -92,16 +92,13 @@ const flag = ref(false);
 
 const onSubmit = async () => {
   try {
-    const result = await axios.post(
-      "http://47.92.133.39:6868/api/msg",
-      Message
-    );
-    console.log(result);
-    if (result.status == 200) {
-      flag.value = !flag.value;
-    } else {
-      alert("Fail to send message");
-    }
+    await axios.post("http://47.92.133.39:6868/api/msg", Message).then((e) => {
+      if (e.status == 200) {
+        flag.value = !flag.value;
+      } else {
+        alert("Fail to send message");
+      }
+    });
   } catch (e) {
     alert("Fail to send message");
     console.log(e);
@@ -116,7 +113,7 @@ const onReset = () => {
 const print_text = (str: string) => {
   let new_str: string = "";
   let num = 0;
-  for (let i = 0; i < str.length; i++) {
+  for (let i = 0; i < 10; i++) {
     new_str += str.charAt(i);
     num += 1;
     if (num === 86) {
