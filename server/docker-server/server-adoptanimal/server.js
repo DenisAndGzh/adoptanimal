@@ -7,8 +7,8 @@ const fs = require("fs");
 
 const app = express();
 
-const privateKey = fs.readFileSync("./certificate/private.pem", "utf8");
-const certificate = fs.readFileSync("./certificate/csr.crt", "utf8");
+const privateKey = fs.readFileSync("./certificate/private.key", "utf8");
+const certificate = fs.readFileSync("./certificate/certificate.crt", "utf8");
 const cert = { key: privateKey, cert: certificate };
 
 app.use(cors());
