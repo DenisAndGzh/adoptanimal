@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   mysql:
-    image: mysql 
+    image: "spbgzh/adoptanimal-mysql:1.0"
     restart: unless-stopped
     build: ./database
     env_file: ./.env
@@ -14,6 +14,7 @@ services:
     volumes:
       - db:/var/lib/mysql
   node:
+    image: "spbgzh/adoptanimal-node:1.0"
     depends_on:
       - mysql
     build: ./server-adoptanimal
@@ -30,5 +31,5 @@ services:
     stdin_open: true
     tty: true
 
-volumes: 
+volumes:
   db:
