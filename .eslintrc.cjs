@@ -14,6 +14,7 @@ module.exports = {
     "@vue/eslint-config-typescript",
     "@vue/eslint-config-prettier",
     "./.eslintrc-auto-import.json",
+    "prettier",
   ],
   overrides: [
     {
