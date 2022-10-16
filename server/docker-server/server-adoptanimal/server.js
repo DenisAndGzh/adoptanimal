@@ -7,9 +7,15 @@ const fs = require("fs");
 
 const app = express();
 
-const privateKey = fs.readFileSync("./certificate/private.key", "utf8");
-const certificate = fs.readFileSync("./certificate/certificate.crt", "utf8");
-const cert = { key: privateKey, cert: certificate };
+const cert = fs.readFileSync("./certificate/certificate.crt");
+const ca = fs.readFileSync("./certificate/ca_bundle.crt");
+const key = fs.readFileSync("./certificate/private.key");
+
+let options = {
+  cert: cert, // fs.readFileSync('./ssl/example.crt');
+  ca: ca, // fs.readFileSync('./ssl/example.ca-bundle');
+  key: key, // fs.readFileSync('./ssl/example.key');
+};
 
 app.use(cors());
 
@@ -35,7 +41,7 @@ require("./app/routes/animal.routes.js")(app);
 require("./app/routes/image.routes.js")(app);
 require("./app/routes/message.routes.js")(app);
 
-const httpsServer = https.createServer(cert, app);
+const httpsServer = https.createServer(options, app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
