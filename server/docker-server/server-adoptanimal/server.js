@@ -1,8 +1,15 @@
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
+const https = require("https");
+const fs = require("fs");
 
 const app = express();
+
+const privateKey = fs.readFileSync("./certificate/private.pem", "utf8");
+const certificate = fs.readFileSync("./certificate/csr.crt", "utf8");
+const cert = { key: privateKey, cert: certificate };
 
 app.use(cors());
 
@@ -27,8 +34,12 @@ app.get("/api", (req, res) => {
 require("./app/routes/animal.routes.js")(app);
 require("./app/routes/image.routes.js")(app);
 require("./app/routes/message.routes.js")(app);
+
+const httpsServer = https.createServer(cert, app);
+
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}.`);
+
+httpsServer.listen(PORT, function () {
+  console.log(`HTTPS Server is running on port ${PORT}.`);
 });
