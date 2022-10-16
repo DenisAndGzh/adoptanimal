@@ -71,7 +71,7 @@
           </div>
           <div>Your Messssage:</div>
           <div>
-            {{ print_text(Message.message) }}
+            {{ Message.message }}
           </div>
         </div>
       </q-card-section>
@@ -110,19 +110,6 @@ const onReset = () => {
   Message.message = "";
 };
 
-const print_text = (str: string) => {
-  let new_str: string = "";
-  let num = 0;
-  for (let i = 0; i < str.length; i++) {
-    new_str += str.charAt(i);
-    num += 1;
-    if (num === 86) {
-      new_str += "\n";
-      num = 0;
-    }
-  }
-  return new_str;
-};
 </script>
 
 <style scoped></style>
