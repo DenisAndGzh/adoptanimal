@@ -90,21 +90,21 @@ const Message = useMessageStore();
 
 const flag = ref(false);
 
-const onSubmit = async () => {
+const onSubmit = () => {
   try {
     console.log(Message.$state);
-    console.log(1111111);
 
-    await axios.post("http://47.92.133.39:6868/api/msg", Message).then((e) => {
+    axios.post("http://47.92.133.39:6868/api/msg", Message).then((e) => {
+      console.log(1111111);
       if (e.status === 200) {
+        console.log(2222222);
         flag.value = !flag.value;
       } else {
-        console.log(2222222);
+        console.log(3333333);
         alert("Fail to send message");
       }
     });
   } catch (e) {
-    console.log(3333333);
     alert("Fail to send message");
   }
 };
