@@ -113,7 +113,7 @@ const onReset = () => {
 const print_text = (str: string) => {
   let new_str: string = "";
   let num = 0;
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < str.length; i++) {
     new_str += str.charAt(i);
     num += 1;
     if (num === 86) {
