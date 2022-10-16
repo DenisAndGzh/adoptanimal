@@ -96,7 +96,10 @@ const onSubmit = async (e: Event | SubmitEvent) => {
   message.email = arr[1].value;
   message.message = arr[2].value;
   try {
-    const result = await axios.post("http://localhost:6868/api/msg", message);
+    const result = await axios.post(
+      "http://47.92.133.39:6868/api/msg",
+      message
+    );
     console.log(result);
     if (result.status == 200) {
       flag.value = !flag.value;
