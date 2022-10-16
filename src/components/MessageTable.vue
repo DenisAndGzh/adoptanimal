@@ -11,7 +11,7 @@
       >
         <q-input
           filled
-          v-model="message.name"
+          v-model="Message.name"
           label="Your name *"
           lazy-rules
           :rules="[
@@ -22,7 +22,7 @@
         <q-input
           filled
           type="email"
-          v-model="message.email"
+          v-model="Message.email"
           label="Your Email *"
           lazy-rules
           :rules="[
@@ -31,7 +31,7 @@
         />
         <q-input
           style="background-position: center"
-          v-model="message.message"
+          v-model="Message.message"
           filled
           label="Your message *"
           type="textarea"
@@ -66,12 +66,12 @@
       <q-card-section style="max-height: 50vh" class="scroll" horizontal>
         <div style="white-space: pre-wrap; width: 100%; padding: 15px">
           <div class="row">
-            <div class="col-6">Your Name: {{ message.name }}</div>
-            <div class="col-6">Your Email: {{ message.email }}</div>
+            <div class="col-6">Your Name: {{ Message.name }}</div>
+            <div class="col-6">Your Email: {{ Message.email }}</div>
           </div>
           <div>Your Messssage:</div>
           <div>
-            {{ print_text(message.message) }}
+            {{ print_text(Message.message) }}
           </div>
         </div>
       </q-card-section>
@@ -86,7 +86,7 @@
 <script setup lang="ts">
 import { useMessageStore } from "@/stores/message";
 import axios from "axios";
-const message = useMessageStore();
+const Message = useMessageStore();
 
 const flag = ref(false);
 
@@ -94,7 +94,7 @@ const onSubmit = async () => {
   try {
     const result = await axios.post(
       "http://47.92.133.39:6868/api/msg",
-      message
+      Message
     );
     console.log(result);
     if (result.status == 200) {
@@ -108,9 +108,9 @@ const onSubmit = async () => {
   }
 };
 const onReset = () => {
-  message.name = "";
-  message.email = "";
-  message.message = "";
+  Message.name = "";
+  Message.email = "";
+  Message.message = "";
 };
 
 const print_text = (str: string) => {
@@ -123,7 +123,6 @@ const print_text = (str: string) => {
       new_str += "\n";
       num = 0;
     }
-    if (i === 300) break;
   }
   return new_str;
 };
