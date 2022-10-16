@@ -1,3 +1,2 @@
 https://adoptanimal.net/* http://adoptanimal.net/:splat 301!
-https://47.92.133.39:6868/api/msg http://47.92.133.39:6868/api/msg 301!
 /* /index.html 200
