@@ -17,10 +17,12 @@ export default defineConfig({
     }),
     AutoImport({
       eslintrc: {
-        enabled: true,
+        enabled: false,
+        filepath: "./.eslintrc-auto-import.json",
+        globalsPropValue: true,
       },
       imports: ["vue", "vue-router"],
-      dts: true,
+      dts: "./auto-imports.d.ts",
     }),
   ],
   resolve: {
