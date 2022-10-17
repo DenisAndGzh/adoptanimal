@@ -2,7 +2,8 @@
   "recommendations": [
     "Vue.volar",
     "Vue.vscode-typescript-vue-plugin",
-    "ESLint",
-    "prettier"
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "illixion.vscode-vibrancy-continued" //Really good!
   ]
 }
