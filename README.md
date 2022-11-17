@@ -7,7 +7,8 @@ Welcome to Adoptanimal, we're all about getting homeless pets into homes.
 
 ## Website Address
 
-[adoptanimal.net](http://adoptanimal.net)
+[adoptanimal.net](http://adoptanimal.net)  
+[Azure Test site](https://salmon-ground-0766fae03.2.azurestaticapps.net)
 
 ## Contributor
 
