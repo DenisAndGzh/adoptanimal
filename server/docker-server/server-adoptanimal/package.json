@@ -1,0 +1,26 @@
+{
+  "name": "adoptanimal-docker-server",
+  "version": "1.0.0",
+  "description": "docker backend server for Adopt Animal",
+  "main": "server.js",
+  "scripts": {
+    "build": "docker compose up -d",
+    "rebuild": "docker compose up -d --build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "rest",
+    "api",
+    "mysql"
+  ],
+  "author": "spbgzh",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mysql2": "^2.0.2"
+  }
+}
