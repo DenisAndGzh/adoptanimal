@@ -14,7 +14,7 @@
           <q-tabs container style="height: 55px; line-height: 55px">
             <q-route-tab to="/home" label="Home" />
             <q-route-tab to="/adopt" label="Adopt" />
-            <q-route-tab to="/lostanimals" label="Lost Animals" />
+            <q-route-tab to="/questionandanswer" label="Q&A" />
             <q-route-tab to="/contact" label="Contact" />
           </q-tabs>
         </div>

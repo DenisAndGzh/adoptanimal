@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-3"></div>
     <div class="col-6 q-my-md">
-      <h3 class="text-white text-center q-my-md">Leaving your message</h3>
+      <h3 class="text-primary text-center q-my-md">Leaving your message</h3>
       <q-form
         style="padding: 10px"
         @submit="onSubmit"

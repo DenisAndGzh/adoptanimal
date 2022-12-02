@@ -35,12 +35,12 @@ const router = createRouter({
           component: () => import("../views/PetView.vue"),
         },
         {
-          path: "lostanimals",
-          name: "lostanimals",
+          path: "questionandanswer",
+          name: "questionandanswer",
           meta: {
-            title: "Lost Animals",
+            title: "Q&A",
           },
-          component: () => import("../views/LostAnimalsView.vue"),
+          component: () => import("../views/QuestionAndAnswerView.vue"),
         },
         {
           path: "contact",

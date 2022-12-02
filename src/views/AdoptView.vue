@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h2 style="padding: 40px 0 5px" class="text-h2 text-white text-center">
+    <h3 style="padding: 10px 0 15px" class="text-primary text-center q-my-md">
       Animals Awaiting Adoption
-    </h2>
+    </h3>
     <q-carousel
       v-model="slide"
       transition-prev="slide-right"
@@ -13,7 +13,7 @@
       padding
       infinite
       arrows
-      height="600px"
+      height="635px"
       control-type="regular"
       class="bg-secondary rounded-borders"
     >
@@ -23,14 +23,7 @@
         >
           <div class="col animal_card">
             <q-card class="my-card" flat>
-              <img
-                class="loading"
-                loading="lazy"
-                :src="Animals.url[0]"
-                width="250"
-                height="350"
-                draggable="false"
-              />
+              <q-img loading="lazy" :src="Animals.url[0]" />
               <q-card-section>
                 <div class="text-overline text-orange-9">
                   {{ Animals.type[0] }}
@@ -57,14 +50,7 @@
           </div>
           <div class="col animal_card">
             <q-card class="my-card" flat>
-              <img
-                class="loading"
-                loading="lazy"
-                :src="Animals.url[1]"
-                width="250"
-                height="350"
-                draggable="false"
-              />
+              <q-img loading="lazy" :src="Animals.url[1]" />
               <q-card-section>
                 <div class="text-overline text-orange-9">
                   {{ Animals.type[1] }}
@@ -91,15 +77,7 @@
           </div>
           <div class="col animal_card">
             <q-card class="my-card" flat>
-              <img
-                class="loading"
-                loading="lazy"
-                :src="Animals.url[2]"
-                width="250"
-                height="350"
-                draggable="false"
-              />
-
+              <q-img loading="lazy" :src="Animals.url[2]" />
               <q-card-section>
                 <div class="text-overline text-orange-9">
                   {{ Animals.type[2] }}
@@ -131,16 +109,8 @@
           class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap"
         >
           <div class="col animal_card">
-            <q-card class="my-card" flat>
-              <img
-                class="loading"
-                loading="lazy"
-                :src="Animals.url[3]"
-                width="250"
-                height="350"
-                draggable="false"
-              />
-
+            <q-card class="my-card" flat
+              ><q-img loading="lazy" :src="Animals.url[3]" />
               <q-card-section>
                 <div class="text-overline text-orange-9">
                   {{ Animals.type[3] }}
@@ -167,15 +137,7 @@
           </div>
           <div class="col animal_card">
             <q-card class="my-card" flat>
-              <img
-                class="loading"
-                loading="lazy"
-                :src="Animals.url[4]"
-                width="250"
-                height="350"
-                draggable="false"
-              />
-
+              <q-img loading="lazy" :src="Animals.url[4]" />
               <q-card-section>
                 <div class="text-overline text-orange-9">
                   {{ Animals.type[4] }}
@@ -201,16 +163,8 @@
             </q-card>
           </div>
           <div class="col animal_card">
-            <q-card class="my-card" flat>
-              <img
-                class="loading"
-                loading="lazy"
-                :src="Animals.url[5]"
-                width="250"
-                height="350"
-                draggable="false"
-              />
-
+            <q-card class="my-card" flat
+              ><q-img loading="lazy" :src="Animals.url[5]" />
               <q-card-section>
                 <div class="text-overline text-orange-9">
                   {{ Animals.type[5] }}
@@ -239,7 +193,9 @@
       </q-carousel-slide>
     </q-carousel>
   </div>
-  <div class="row"></div>
+  <div>
+    <q-linear-progress reverse size="10px" class="q-mt-md" />
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -256,6 +212,8 @@ const slide = ref(1);
   padding: 0 10px;
 }
 .loading {
-  background: transparent url(../assets/loading.gif) center no-repeat;
+  background: transparent url(../assets/loading.gif) scroll center no-repeat;
+  background-size: cover;
+  z-index: 100;
 }
 </style>
