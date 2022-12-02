@@ -11,14 +11,15 @@ The backend server consists of **nodejs** + **express** + **mysql**
 
 ### Animal Api
 
-| Methods | Urls            | Actions               |
-| ------- | --------------- | --------------------- |
-| GET     | /api/animal     | Get all Animal        |
-| GET     | /api/animal/:id | Get Animal by _id_    |
-| POST    | /api/animal     | Add new Animal        |
-| PUT     | /api/animal/:id | Update Animal by _id_ |
-| DELETE  | /api/animal/:id | Delete Animal by _id_ |
-| DELETE  | /api/animal     | Delete all Animal     |
+| Methods | Urls              | Actions               |
+| ------- | ----------------- | --------------------- |
+| GET     | /api/animal       | Get all Animal        |
+| GET     | /api/animal/:id   | Get Animal by _id_    |
+| POST    | /api/animal       | Add new Animal        |
+| PUT     | /api/animal/:id   | Update Animal by _id_ |
+| DELETE  | /api/animal/:id   | Delete Animal by _id_ |
+| DELETE  | /api/animal       | Delete all Animal     |
+| GEt     | /api/animal/rndom | Get 6 random animals  |
 
 ### Image Api
 
