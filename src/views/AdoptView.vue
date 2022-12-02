@@ -24,6 +24,8 @@
           <div class="col animal_card">
             <q-card class="my-card" flat>
               <img
+                class="loading"
+                loading="lazy"
                 :src="Animals.url[0]"
                 width="250"
                 height="350"
@@ -56,6 +58,8 @@
           <div class="col animal_card">
             <q-card class="my-card" flat>
               <img
+                class="loading"
+                loading="lazy"
                 :src="Animals.url[1]"
                 width="250"
                 height="350"
@@ -88,6 +92,8 @@
           <div class="col animal_card">
             <q-card class="my-card" flat>
               <img
+                class="loading"
+                loading="lazy"
                 :src="Animals.url[2]"
                 width="250"
                 height="350"
@@ -127,6 +133,8 @@
           <div class="col animal_card">
             <q-card class="my-card" flat>
               <img
+                class="loading"
+                loading="lazy"
                 :src="Animals.url[3]"
                 width="250"
                 height="350"
@@ -160,6 +168,8 @@
           <div class="col animal_card">
             <q-card class="my-card" flat>
               <img
+                class="loading"
+                loading="lazy"
                 :src="Animals.url[4]"
                 width="250"
                 height="350"
@@ -193,6 +203,8 @@
           <div class="col animal_card">
             <q-card class="my-card" flat>
               <img
+                class="loading"
+                loading="lazy"
                 :src="Animals.url[5]"
                 width="250"
                 height="350"
@@ -242,5 +254,8 @@ const slide = ref(1);
 <style lang="scss" scoped>
 .animal_card {
   padding: 0 10px;
+}
+.loading {
+  background: transparent url(../assets/loading.gif) center no-repeat;
 }
 </style>
