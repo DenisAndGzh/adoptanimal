@@ -62,6 +62,23 @@ class Animal {
       result(null, res);
     });
   }
+
+  static getRandom(result) {
+    let query =
+      "SELECT * FROM animal WHERE id >= ((SELECT MAX(id) FROM animal)-(SELECT MIN(id) FROM animal)) * RAND() + (SELECT MIN(id) FROM animal) LIMIT 6";
+
+    sql.query(query, (err, res) => {
+      if (err) {
+        console.log("error: ", err);
+        result(null, err);
+        return;
+      }
+
+      console.log("animal: ", res);
+      result(null, res);
+    });
+  }
+
   static updateById(id, animal, result) {
     sql.query(
       "UPDATE animal SET name = ?, type = ?, age = ?, sex = ?, weight = ?, breed = ?, color = ?, city = ?, description = ?  WHERE id = ?",

@@ -69,7 +69,9 @@
 
     <q-page-container>
       <q-page>
-        <router-view></router-view>
+        <Suspense>
+          <router-view></router-view>
+        </Suspense>
       </q-page>
     </q-page-container>
 

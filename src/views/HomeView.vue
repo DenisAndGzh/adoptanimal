@@ -19,22 +19,10 @@
             :name="1"
             img-src="../assets/imgs/5.jpeg"
           >
-            <div class="absolute-bottom custom-caption">
-              <div class="text-h2">First stop</div>
-              <div class="text-subtitle1">Mountains</div>
-            </div>
           </q-carousel-slide>
           <q-carousel-slide :name="2" img-src="../assets/imgs/4.jpeg">
-            <div class="absolute-bottom custom-caption">
-              <div class="text-h2">Second stop</div>
-              <div class="text-subtitle1">Famous City</div>
-            </div>
           </q-carousel-slide>
           <q-carousel-slide :name="3" img-src="../assets/imgs/3.jpeg">
-            <div class="absolute-bottom custom-caption">
-              <div class="text-h2">Third stop</div>
-              <div class="text-subtitle1">Famous Bridge</div>
-            </div>
           </q-carousel-slide>
         </q-carousel>
         <div class="row">

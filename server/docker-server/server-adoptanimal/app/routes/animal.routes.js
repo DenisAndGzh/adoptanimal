@@ -10,6 +10,9 @@ module.exports = (app) => {
   router.get("/", animals.findAll);
 
   // Retrieve a single animal with id
+  router.get("/random", animals.random);
+
+  // Retrieve a single animal with id
   router.get("/:id", animals.findOne);
 
   // Update a Animal with id

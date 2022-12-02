@@ -62,6 +62,17 @@ exports.findOne = (req, res) => {
   });
 };
 
+// Find 6 random Animals
+exports.random = (req, res) => {
+  Animal.getRandom((err, data) => {
+    if (err)
+      res.status(500).send({
+        message: err.message || "Some error occurred while retrieving Animals.",
+      });
+    else res.send(data);
+  });
+};
+
 // Update a Animal identified by the id in the request
 exports.update = (req, res) => {
   // Validate Request
