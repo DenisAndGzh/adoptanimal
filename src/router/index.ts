@@ -27,6 +27,14 @@ const router = createRouter({
           component: () => import("../views/AdoptView.vue"),
         },
         {
+          path: "petinfo",
+          name: "petinfo",
+          meta: {
+            title: "petinfo",
+          },
+          component: () => import("../views/PetView.vue"),
+        },
+        {
           path: "lostanimals",
           name: "lostanimals",
           meta: {

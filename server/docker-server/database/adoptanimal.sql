@@ -16,7 +16,7 @@ CREATE TABLE `animal` (
   `city` varchar(32) DEFAULT NULL,
   `description` varchar(1000) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE = InnoDB AUTO_INCREMENT = 1001 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
 -- ----------------------------
 -- Table structure for image
 -- ----------------------------
@@ -27,7 +27,7 @@ CREATE TABLE `image` (
   `width` int DEFAULT NULL,
   `height` int DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE = InnoDB AUTO_INCREMENT = 2 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
 SET FOREIGN_KEY_CHECKS = 1;
 -- ----------------------------
 -- Table structure for message
