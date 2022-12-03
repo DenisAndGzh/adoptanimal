@@ -1,7 +1,6 @@
 import { defineStore } from "pinia";
 import { Notify } from "quasar";
 import axios from "axios";
-import AppVue from "@/App.vue";
 
 export const useFavoriteStore = defineStore("favorites", {
   state: () => {
@@ -23,9 +22,7 @@ export const useFavoriteStore = defineStore("favorites", {
         this.id.push(id);
         let pet = null;
         try {
-          pet = (
-            await axios.get(AppVue.GLOBAL.APIAddress + "/api/animal/" + id)
-          ).data;
+          pet = (await axios.get("https://47.92.133.39/api/animal/" + id)).data;
         } catch (e) {
           console.error(e);
         }
