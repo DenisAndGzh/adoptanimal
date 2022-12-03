@@ -20,7 +20,7 @@
         </div>
         <div class="col-3">
           <q-toolbar>
-            <q-toolbar-title class="row text-center">
+            <q-toolbar-title class="row">
               <q-form @submit="onSubmit">
                 <q-input
                   dark
@@ -28,9 +28,10 @@
                   rounded
                   outlined
                   borderless
+                  type="text"
                   v-model="text"
-                  input-class="text-right"
-                  class="q-ml-xs col-6"
+                  input-class="text-left"
+                  class="q-ml-xxs"
                   name="search_value"
                 >
                   <template v-slot:append>
@@ -39,7 +40,7 @@
                   </template>
                 </q-input>
               </q-form>
-              <q-separator spaced="10px" dark vertical inset />
+              <q-separator spaced="5px" dark vertical inset />
               <q-fab
                 color="white"
                 flat
@@ -48,6 +49,7 @@
                 icon="menu"
                 padding="5px"
                 direction="right"
+                class="col-1"
               >
                 <q-fab-action
                   padding="5px"
