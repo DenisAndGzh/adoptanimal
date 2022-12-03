@@ -32,6 +32,13 @@ export const useAnimalsStore = defineStore("animals", {
   actions: {
     async init() {
       let arr;
+      this.id = [];
+      this.age = [];
+      this.name = [];
+      this.type = [];
+      this.breed = [];
+      this.color = [];
+      this.url = [];
       while ((await arr)?.data.length != 6) {
         try {
           arr = axios.get("https://47.92.133.39/api/animal/random");

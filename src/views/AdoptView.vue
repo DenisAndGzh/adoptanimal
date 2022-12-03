@@ -1,8 +1,23 @@
 <template>
   <div>
-    <h3 style="padding: 10px 0 15px" class="text-primary text-center q-my-md">
-      Animals Awaiting Adoption
-    </h3>
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-8">
+        <h3
+          style="padding: 10px 0 15px"
+          class="text-primary text-center q-my-md"
+        >
+          Animals Awaiting Adoption
+        </h3>
+      </div>
+      <div class="col-2" style="padding: 37px 0 15px">
+        <q-btn
+          style="background: #2f4f4f; color: white"
+          label="Refresh"
+          @click="click_reflash"
+        />
+      </div>
+    </div>
     <q-carousel
       v-model="slide"
       transition-prev="slide-right"
@@ -203,8 +218,10 @@ import { useAnimalsStore } from "@/stores/animals";
 
 const Animals = useAnimalsStore();
 Animals.init();
-
 const slide = ref(1);
+const click_reflash = () => {
+  Animals.init();
+};
 </script>
 
 <style lang="scss" scoped>
