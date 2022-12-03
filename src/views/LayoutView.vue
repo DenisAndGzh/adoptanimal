@@ -14,6 +14,7 @@
           <q-tabs container style="height: 55px; line-height: 55px">
             <q-route-tab to="/home" label="Home" />
             <q-route-tab to="/adopt" label="Adopt" />
+            <q-route-tab to="/favorite" label="Favorite" />
             <q-route-tab to="/questionandanswer" label="Q&A" />
             <q-route-tab to="/contact" label="Contact" />
           </q-tabs>
@@ -40,14 +41,6 @@
                   </template>
                 </q-input>
               </q-form>
-              <q-separator spaced="10px" dark vertical inset />
-              <q-btn
-                round
-                color="white"
-                text-color="primary"
-                icon="fa-solid fa-heart"
-                @click="onClick_Favorite"
-              />
             </q-toolbar-title>
           </q-toolbar>
         </div>
@@ -75,7 +68,13 @@
         <div class="col-3">
           <q-toolbar>
             <q-toolbar-title class="text-center FooterCustomStyle">
-              <q-btn flat round dense icon="email" to="/contact" />
+              <q-btn
+                flat
+                round
+                dense
+                icon="fa-solid fa-heart"
+                @click="onClick_Favorite"
+              />
               <q-btn
                 flat
                 round
@@ -95,9 +94,6 @@
 const text = ref("");
 const router = useRouter();
 
-const onClick_JoinUs = () => {
-  router.push({ path: "/joinus" });
-};
 const onClick_Favorite = () => {
   router.push({ path: "/favorite" });
 };
