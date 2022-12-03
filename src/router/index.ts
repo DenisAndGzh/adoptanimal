@@ -58,6 +58,22 @@ const router = createRouter({
           },
           component: () => import("../views/DonateView.vue"),
         },
+        {
+          path: "favorite",
+          name: "favorite",
+          meta: {
+            title: "Favorite",
+          },
+          component: () => import("../views/FavoriteView.vue"),
+        },
+        {
+          path: "search",
+          name: "search",
+          meta: {
+            title: "Search",
+          },
+          component: () => import("../views/SearchView.vue"),
+        },
       ],
     },
   ],

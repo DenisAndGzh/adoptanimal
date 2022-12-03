@@ -31,7 +31,7 @@
       <div class="col-1"></div>
     </div>
   </div>
-  <div class="row">
+  <div class="row" style="margin: 0; padding: 0 0 50px 0">
     <div class="col-1"></div>
     <div
       class="col-10"
@@ -46,7 +46,6 @@
     ></div>
     <div class="col-1"></div>
   </div>
-  <div style="margin: 0; padding: 0 0 50px 0"></div>
   <div class="row">
     <div class="col-2"></div>
     <div class="col-8">
@@ -137,6 +136,143 @@
       </div>
     </div>
     <div class="col-2"></div>
+  </div>
+  <div class="row" style="margin: 0; padding: 0 0 50px 0">
+    <div class="col-1"></div>
+    <div
+      class="col-10"
+      style="
+        margin: 0;
+        padding: 0;
+        width: 83%;
+        height: 1px;
+        background-color: black;
+        overflow: hidden;
+      "
+    ></div>
+    <div class="col-1"></div>
+  </div>
+  <div class="row" style="padding: 0 0 40px 0">
+    <div class="col-3"></div>
+    <div class="col-6">
+      <div
+        class="text-h2 text-center"
+        style="padding: 0 0 40px 0"
+        color="primary"
+      >
+        The history of project
+      </div>
+      <q-timeline color="primary">
+        <q-timeline-entry heading> October 22, 2022 </q-timeline-entry>
+
+        <q-timeline-entry icon="done_all">
+          <template v-slot:title> Determine the project </template>
+          <template v-slot:subtitle> September 19, 2022 </template>
+
+          <div>
+            We decided to make a web project for a pet adoption site, providing
+            shelter for homeless animals.
+          </div>
+        </q-timeline-entry>
+
+        <q-timeline-entry icon="done_all">
+          <template v-slot:title> Buy domain name </template>
+          <template v-slot:subtitle> September 25, 2022 </template>
+
+          <div>
+            We purchased the domain name of
+            <a href="https://adoptanimal.net/">adoptanimal.net</a> for one year
+            for our project.
+          </div>
+        </q-timeline-entry>
+
+        <q-timeline-entry heading> October, 2022 </q-timeline-entry>
+        <q-timeline-entry icon="done_all">
+          <template v-slot:title> Project Approval </template>
+          <template v-slot:subtitle> October 6, 2022 </template>
+
+          <div>Our project topics are approved.</div>
+        </q-timeline-entry>
+
+        <q-timeline-entry icon="done_all">
+          <template v-slot:title
+            >Complete the site's layout and home page
+          </template>
+          <template v-slot:subtitle> October 15, 2022 </template>
+
+          <div>
+            Designed the overall layout of the website and made the homepage of
+            the website.
+          </div>
+        </q-timeline-entry>
+
+        <q-timeline-entry icon="done_all">
+          <template v-slot:title>
+            Complete the backend of the website
+          </template>
+          <template v-slot:subtitle> October 22, 2022 </template>
+
+          <div>
+            Purchased the server, completed the backend of the website, and
+            provided API services for the website.
+          </div>
+        </q-timeline-entry>
+        <q-timeline-entry heading> November, 2022 </q-timeline-entry>
+        <q-timeline-entry icon="done_all">
+          <template v-slot:title> Complete database design </template>
+          <template v-slot:subtitle> November 10, 2022 </template>
+
+          <div>
+            Designed the database for the website and designed the data table
+            for various data.
+          </div>
+        </q-timeline-entry>
+
+        <q-timeline-entry icon="done_all">
+          <template v-slot:title>
+            Complete the function of leaving messages
+          </template>
+          <template v-slot:subtitle> November 15, 2022 </template>
+
+          <div>
+            Completed the message function, providing users with a channel to
+            apply for adoption and put forward opinions.
+          </div>
+        </q-timeline-entry>
+
+        <q-timeline-entry heading> December, 2022 </q-timeline-entry>
+        <q-timeline-entry icon="done_all">
+          <template v-slot:title
+            >Complete the pet display page design
+          </template>
+          <template v-slot:subtitle> December 3, 2022 </template>
+
+          <div>
+            Completed the design of the pet adoption page, which randomly
+            displays 6 different pets to be adopted.
+          </div>
+        </q-timeline-entry>
+        <q-timeline-entry>
+          <template v-slot:title>Favorites function </template>
+          <template v-slot:subtitle> to be determined </template>
+
+          <div>to be determined</div>
+        </q-timeline-entry>
+        <q-timeline-entry>
+          <template v-slot:title>animal search function </template>
+          <template v-slot:subtitle> to be determined </template>
+
+          <div>to be determined</div>
+        </q-timeline-entry>
+        <q-timeline-entry>
+          <template v-slot:title>Donate and join our page </template>
+          <template v-slot:subtitle> to be determined </template>
+
+          <div>to be determined</div>
+        </q-timeline-entry>
+      </q-timeline>
+    </div>
+    <div class="col-3"></div>
   </div>
 </template>
 
