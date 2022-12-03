@@ -110,7 +110,6 @@
 
 <script setup lang="ts">
 import MessageTable from "../components/MessageTable.vue";
-const slide = ref(1);
 </script>
 
 <style lang="scss" scoped>

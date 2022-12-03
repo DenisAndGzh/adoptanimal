@@ -252,11 +252,11 @@
             displays 6 different pets to be adopted.
           </div>
         </q-timeline-entry>
-        <q-timeline-entry>
+        <q-timeline-entry icon="done_all">
           <template v-slot:title>Favorites function </template>
-          <template v-slot:subtitle> to be determined </template>
+          <template v-slot:subtitle> December 3, 2022 </template>
 
-          <div>to be determined</div>
+          <div>Added the ability to store favorite pets for users</div>
         </q-timeline-entry>
         <q-timeline-entry>
           <template v-slot:title>animal search function </template>
@@ -265,7 +265,7 @@
           <div>to be determined</div>
         </q-timeline-entry>
         <q-timeline-entry>
-          <template v-slot:title>Donate and join our page </template>
+          <template v-slot:title>Join our page </template>
           <template v-slot:subtitle> to be determined </template>
 
           <div>to be determined</div>
