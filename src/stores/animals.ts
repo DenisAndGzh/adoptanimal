@@ -62,7 +62,6 @@ export const useAnimalsStore = defineStore("animals", {
           );
         } catch (e) {
           console.error(e);
-          alert("Fail to get url");
         }
       }
       console.log(this.url);
