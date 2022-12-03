@@ -2,7 +2,7 @@
   <div>
     <q-page-container>
       <q-page>
-        <q-parallax :height="430">
+        <q-parallax :height="400">
           <template v-slot:media>
             <video
               style="width: 100%; height: auto; position: relative; top: -250px"
