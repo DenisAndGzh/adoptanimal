@@ -91,15 +91,88 @@
 </template>
 
 <script setup lang="ts">
+import axios from "axios";
+import { Notify } from "quasar";
+import { useSearchStore } from "@/stores/search";
+
 const text = ref("");
 const router = useRouter();
+const Search = useSearchStore();
 
 const onClick_Favorite = () => {
   router.push({ path: "/favorite" });
 };
 
-const doSearch = (search: string) => {
-  console.log(search);
+const doSearch = async (search: string) => {
+  let temp: any;
+  let flag = 0;
+  try {
+    temp = (await axios.get("https://47.92.133.39/api/animal/" + search))
+      .data as string;
+  } catch (e) {
+    flag += 1;
+    try {
+      temp = (await axios.get("https://47.92.133.39/api/animal/name/" + search))
+        .data as string;
+    } catch (e) {
+      flag += 1;
+      try {
+        temp = (
+          await axios.get("https://47.92.133.39/api/animal/breed/" + search)
+        ).data as string;
+      } catch (e) {
+        flag += 1;
+        console.log(e);
+      }
+    }
+  }
+  console.log(temp);
+  console.log(flag);
+  switch (flag) {
+    case 0:
+      Notify.create({
+        position: "top",
+        message: "ID result found!",
+        color: "green",
+      });
+      await router.replace("/");
+      router.push({ path: "/petinfo", query: { id: temp["id"] } });
+      break;
+    case 1:
+      Notify.create({
+        position: "top",
+        message: "Name result found!",
+        color: "green",
+      });
+      await router.replace("/");
+      if (temp.length == 1) {
+        router.push({ path: "/petinfo", query: { id: temp[0]["id"] } });
+      } else {
+        Search.search = temp[0];
+        router.push("/search");
+      }
+      break;
+    case 2:
+      Notify.create({
+        position: "top",
+        message: "Breed result found!",
+        color: "green",
+      });
+      await router.replace("/");
+      if (temp.length == 1) {
+        router.push({ path: "/petinfo", query: { id: temp[0]["id"] } });
+      } else {
+        Search.search = temp[0];
+        router.push("/search");
+      }
+      break;
+    case 3:
+      Notify.create({
+        position: "top",
+        message: "Search result no found!",
+        color: "red",
+      });
+  }
 };
 
 const onSubmit = (form: any) => {
