@@ -2,29 +2,26 @@
   <div>
     <q-page-container>
       <q-page>
-        <q-carousel
-          arrows
-          animated
-          infinite
-          swipeable
-          transition-prev="slide-right"
-          transition-next="slide-left"
-          control-color="secondary"
-          autoplay
-          v-model="slide"
-          height="440px"
-        >
-          <q-carousel-slide
-            class="q-pa-none"
-            :name="1"
-            img-src="../assets/imgs/5.jpeg"
+        <q-parallax :height="430">
+          <template v-slot:media>
+            <video
+              style="width: 100%; height: auto; position: relative; top: -250px"
+              autoplay
+              loop
+              muted
+            >
+              <source type="video/mp4" src="../assets/vedio/video.mp4" />
+            </video>
+          </template>
+
+          <h1 class="text-primary" style="font-weight: bolder">Adoptanimal</h1>
+          <h3
+            class="text-primary"
+            style="font-weight: normal; line-height: 80px"
           >
-          </q-carousel-slide>
-          <q-carousel-slide :name="2" img-src="../assets/imgs/4.jpeg">
-          </q-carousel-slide>
-          <q-carousel-slide :name="3" img-src="../assets/imgs/3.jpeg">
-          </q-carousel-slide>
-        </q-carousel>
+            We are dedicated to bringing homeless pets home.
+          </h3>
+        </q-parallax>
         <div class="row">
           <div class="col">
             <q-card
