@@ -17,14 +17,17 @@ export const useAnimalsStore = defineStore("animals", {
     getAnimalById: () => {
       return async (petId: string) => {
         let pet = null;
+        let url = null;
         try {
           pet = (await axios.get("https://47.92.133.39/api/animal/" + petId))
             .data;
+          url = (await axios.get("https://47.92.133.39/api/img/" + petId)).data[
+            "acgurl"
+          ] as string;
         } catch (e) {
           console.error(e);
-          alert("Fail to get animal");
         }
-        console.log(pet);
+        pet.url = url;
         return pet;
       };
     },
@@ -44,7 +47,6 @@ export const useAnimalsStore = defineStore("animals", {
           arr = axios.get("https://47.92.133.39/api/animal/random");
         } catch (e) {
           console.error(e);
-          alert("Fail to get random animals");
         }
         console.log(arr);
       }

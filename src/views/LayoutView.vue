@@ -21,21 +21,24 @@
         <div class="col-3">
           <q-toolbar>
             <q-toolbar-title class="row text-center">
-              <q-input
-                dark
-                dense
-                rounded
-                outlined
-                borderless
-                v-model="text"
-                input-class="text-right"
-                class="q-ml-xs col-6"
-              >
-                <template v-slot:append>
-                  <q-icon v-if="text === ''" name="search" />
-                  <q-icon v-else name="clear" @click="text = ''" />
-                </template>
-              </q-input>
+              <q-form @submit="onSubmit">
+                <q-input
+                  dark
+                  dense
+                  rounded
+                  outlined
+                  borderless
+                  v-model="text"
+                  input-class="text-right"
+                  class="q-ml-xs col-6"
+                  name="search_value"
+                >
+                  <template v-slot:append>
+                    <q-icon v-if="text === ''" name="search" />
+                    <q-icon v-else name="clear" @click="text = ''" />
+                  </template>
+                </q-input>
+              </q-form>
               <q-separator spaced="10px" dark vertical inset />
               <q-fab
                 color="white"
@@ -57,8 +60,8 @@
                   padding="5px"
                   color="white"
                   text-color="primary"
-                  @click="onClick_Donate"
-                  icon="fa-solid fa-hand-holding-heart"
+                  @click="onClick_JoinUs"
+                  icon="join_full"
                 />
               </q-fab>
             </q-toolbar-title>
@@ -108,11 +111,22 @@
 const text = ref("");
 const router = useRouter();
 
-const onClick_Donate = () => {
-  router.push({ path: "/donate" });
+const onClick_JoinUs = () => {
+  router.push({ path: "/joinus" });
 };
 const onClick_Favorite = () => {
   router.push({ path: "/favorite" });
+};
+
+const doSearch = (search: string) => {
+  console.log(search);
+};
+
+const onSubmit = (form: any) => {
+  const search = form.target[0]._value;
+  if (search !== "") {
+    doSearch(search);
+  }
 };
 </script>
 
