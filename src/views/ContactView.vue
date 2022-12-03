@@ -1,5 +1,5 @@
 <template>
-  <div class="text-h3 text-center text-primary" style="padding: 40px 0 0px 0">
+  <div class="text-h3 text-center text-primary" style="padding: 25px 0 0px 0">
     Contact Details
   </div>
   <div class="row" style="padding: 30px 0 5px 0">

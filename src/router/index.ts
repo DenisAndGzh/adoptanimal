@@ -51,12 +51,12 @@ const router = createRouter({
           component: () => import("../views/ContactView.vue"),
         },
         {
-          path: "donate",
-          name: "donate",
+          path: "joinus",
+          name: "joinus",
           meta: {
-            title: "Donate",
+            title: "JoinUs",
           },
-          component: () => import("../views/DonateView.vue"),
+          component: () => import("../views/JoinUsView.vue"),
         },
         {
           path: "favorite",

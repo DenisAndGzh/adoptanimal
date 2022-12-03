@@ -1,5 +1,5 @@
 <template>
-  <div>Donate</div>
+  <div>Join Us</div>
 </template>
 
 <script setup lang="ts"></script>

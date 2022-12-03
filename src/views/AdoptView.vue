@@ -56,6 +56,11 @@
               <q-card-actions align="right">
                 <q-btn
                   outline
+                  color="red-9"
+                  label="Add Favorite"
+                  @click="click_addfavorite(Animals.id[0])"
+                /><q-btn
+                  outline
                   color="primary"
                   label="More Info"
                   :to="{ path: '/petinfo', query: { id: Animals.id[0] } }"
@@ -83,6 +88,12 @@
               <q-card-actions align="right">
                 <q-btn
                   outline
+                  color="red-9"
+                  label="Add Favorite"
+                  @click="click_addfavorite(Animals.id[1])"
+                />
+                <q-btn
+                  outline
                   color="primary"
                   label="More Info"
                   :to="{ path: '/petinfo', query: { id: Animals.id[1] } }"
@@ -108,6 +119,12 @@
               </q-card-section>
 
               <q-card-actions align="right">
+                <q-btn
+                  outline
+                  color="red-9"
+                  label="Add Favorite"
+                  @click="click_addfavorite(Animals.id[2])"
+                />
                 <q-btn
                   outline
                   color="primary"
@@ -143,6 +160,12 @@
               <q-card-actions align="right">
                 <q-btn
                   outline
+                  color="red-9"
+                  label="Add Favorite"
+                  @click="click_addfavorite(Animals.id[3])"
+                />
+                <q-btn
+                  outline
                   color="primary"
                   label="More Info"
                   :to="{ path: '/petinfo', query: { id: Animals.id[3] } }"
@@ -168,6 +191,12 @@
               </q-card-section>
 
               <q-card-actions align="right">
+                <q-btn
+                  outline
+                  color="red-9"
+                  label="Add Favorite"
+                  @click="click_addfavorite(Animals.id[4])"
+                />
                 <q-btn
                   outline
                   color="primary"
@@ -197,6 +226,12 @@
               <q-card-actions align="right">
                 <q-btn
                   outline
+                  color="red-9"
+                  label="Add Favorite"
+                  @click="click_addfavorite(Animals.id[5])"
+                />
+                <q-btn
+                  outline
                   color="primary"
                   label="More Info"
                   :to="{ path: '/petinfo', query: { id: Animals.id[5] } }"
@@ -215,12 +250,18 @@
 
 <script setup lang="ts">
 import { useAnimalsStore } from "@/stores/animals";
+import { useFavoriteStore } from "@/stores/favorites";
 
 const Animals = useAnimalsStore();
+const Favorites = useFavoriteStore();
 Animals.init();
 const slide = ref(1);
 const click_reflash = () => {
   Animals.init();
+};
+const click_addfavorite = (id: string) => {
+  Favorites.addFavorite(id);
+  console.log(Favorites.id);
 };
 </script>
 
