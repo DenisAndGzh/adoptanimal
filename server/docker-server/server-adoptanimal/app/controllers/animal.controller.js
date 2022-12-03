@@ -45,6 +45,39 @@ exports.findAll = (req, res) => {
   });
 };
 
+// Find a single Animal by Name
+exports.findByName = (req, res) => {
+  Animal.findByName(req.params.name, (err, data) => {
+    if (err) {
+      if (err.kind === "not_found") {
+        res.status(404).send({
+          message: `Not found Animal with id ${req.params.name}.`,
+        });
+      } else {
+        res.status(500).send({
+          message: "Error retrieving Animal with name " + req.params.name,
+        });
+      }
+    } else res.send(data);
+  });
+};
+// Find a single Animal by breed
+exports.findByBreed = (req, res) => {
+  Animal.findByBreed(req.params.breed, (err, data) => {
+    if (err) {
+      if (err.kind === "not_found") {
+        res.status(404).send({
+          message: `Not found Animal with id ${req.params.breed}.`,
+        });
+      } else {
+        res.status(500).send({
+          message: "Error retrieving Animal with breed " + req.params.breed,
+        });
+      }
+    } else res.send(data);
+  });
+};
+
 // Find a single Animal by Id
 exports.findOne = (req, res) => {
   Animal.findById(req.params.id, (err, data) => {
