@@ -12,6 +12,10 @@
             >
               <source type="video/mp4" src="../assets/vedio/video.mp4" />
             </video>
+            <div
+              class="absolute-full text-subtitle2 flex flex-center"
+              style="background-color: rgba(250, 250, 250, 0.2)"
+            ></div>
           </template>
 
           <h1 class="text-primary" style="font-weight: bolder">Adoptanimal</h1>
