@@ -95,9 +95,6 @@
 const text = ref("");
 const router = useRouter();
 
-const onClick_JoinUs = () => {
-  router.push({ path: "/joinus" });
-};
 const onClick_Favorite = () => {
   router.push({ path: "/favorite" });
 };

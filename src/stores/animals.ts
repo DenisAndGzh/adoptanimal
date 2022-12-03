@@ -1,5 +1,6 @@
 import { defineStore } from "pinia";
 import axios from "axios";
+import AppVue from "@/App.vue";
 
 export const useAnimalsStore = defineStore("animals", {
   state: () => {
@@ -19,11 +20,12 @@ export const useAnimalsStore = defineStore("animals", {
         let pet = null;
         let url = null;
         try {
-          pet = (await axios.get("https://47.92.133.39/api/animal/" + petId))
-            .data;
-          url = (await axios.get("https://47.92.133.39/api/img/" + petId)).data[
-            "acgurl"
-          ] as string;
+          pet = (
+            await axios.get(AppVue.GLOBAL.APIAddress + "/api/animal/" + petId)
+          ).data;
+          url = (
+            await axios.get(AppVue.GLOBAL.APIAddress + "/api/img/" + petId)
+          ).data["acgurl"] as string;
         } catch (e) {
           console.error(e);
         }

@@ -84,6 +84,7 @@
 </template>
 
 <script setup lang="ts">
+import AppVue from "@/App.vue";
 import { useMessageStore } from "@/stores/message";
 import axios from "axios";
 const Message = useMessageStore();
@@ -93,7 +94,7 @@ const flag = ref(false);
 const onSubmit = async () => {
   try {
     await axios
-      .post("https://47.92.133.39/api/msg", Message.$state)
+      .post(AppVue.GLOBAL.APIAddress + "/api/msg", Message.$state)
       .then((e) => {
         if (e.status === 200) {
           flag.value = !flag.value;

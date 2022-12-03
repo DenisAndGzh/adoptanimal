@@ -3,6 +3,7 @@ import { createPinia } from "pinia";
 
 import App from "./App.vue";
 import router from "./router";
+import global_ from "./components/GlobalValue.vue";
 
 import "./assets/main.css";
 
@@ -13,6 +14,8 @@ import "@quasar/extras/material-icons/material-icons.css";
 import "quasar/src/css/index.sass";
 
 const app = createApp(App);
+
+app.config.globalProperties.GLOBAL = global_;
 
 app.use(createPinia());
 app.use(router);
