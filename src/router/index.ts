@@ -51,14 +51,6 @@ const router = createRouter({
           component: () => import("../views/ContactView.vue"),
         },
         {
-          path: "joinus",
-          name: "joinus",
-          meta: {
-            title: "JoinUs",
-          },
-          component: () => import("../views/JoinUsView.vue"),
-        },
-        {
           path: "favorite",
           name: "favorite",
           meta: {

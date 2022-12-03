@@ -51,7 +51,7 @@ exports.findByName = (req, res) => {
     if (err) {
       if (err.kind === "not_found") {
         res.status(404).send({
-          message: `Not found Animal with id ${req.params.name}.`,
+          message: `Not found Animal with name ${req.params.name}.`,
         });
       } else {
         res.status(500).send({
@@ -61,13 +61,14 @@ exports.findByName = (req, res) => {
     } else res.send(data);
   });
 };
+
 // Find a single Animal by breed
 exports.findByBreed = (req, res) => {
   Animal.findByBreed(req.params.breed, (err, data) => {
     if (err) {
       if (err.kind === "not_found") {
         res.status(404).send({
-          message: `Not found Animal with id ${req.params.breed}.`,
+          message: `Not found Animal with breed ${req.params.breed}.`,
         });
       } else {
         res.status(500).send({

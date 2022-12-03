@@ -40,32 +40,14 @@
                   </template>
                 </q-input>
               </q-form>
-              <q-separator spaced="5px" dark vertical inset />
-              <q-fab
-                color="white"
-                flat
+              <q-separator spaced="10px" dark vertical inset />
+              <q-btn
                 round
-                dense
-                icon="menu"
-                padding="5px"
-                direction="right"
-                class="col-1"
-              >
-                <q-fab-action
-                  padding="5px"
-                  color="white"
-                  text-color="primary"
-                  @click="onClick_Favorite"
-                  icon="fa-solid fa-heart"
-                />
-                <q-fab-action
-                  padding="5px"
-                  color="white"
-                  text-color="primary"
-                  @click="onClick_JoinUs"
-                  icon="join_full"
-                />
-              </q-fab>
+                color="white"
+                text-color="primary"
+                icon="fa-solid fa-heart"
+                @click="onClick_Favorite"
+              />
             </q-toolbar-title>
           </q-toolbar>
         </div>
