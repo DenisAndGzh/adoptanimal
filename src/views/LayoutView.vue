@@ -50,8 +50,8 @@
                   padding="5px"
                   color="white"
                   text-color="primary"
-                  @click="onClick_Login"
-                  icon="fa-solid fa-user"
+                  @click="onClick_Favorite"
+                  icon="fa-solid fa-heart"
                 />
                 <q-fab-action
                   padding="5px"
@@ -88,9 +88,7 @@
         <div class="col-3">
           <q-toolbar>
             <q-toolbar-title class="text-center FooterCustomStyle">
-              <q-btn flat round dense icon="call" />
-              <q-btn flat round dense icon="shopping_cart" />
-              <q-btn flat round dense icon="email" />
+              <q-btn flat round dense icon="email" to="/contact" />
               <q-btn
                 flat
                 round
@@ -108,13 +106,13 @@
 
 <script setup lang="ts">
 const text = ref("");
-const $router = useRouter();
+const router = useRouter();
 
 const onClick_Donate = () => {
-  $router.push({ path: "/donate" });
+  router.push({ path: "/donate" });
 };
-const onClick_Login = () => {
-  $router.push({ path: "/login" });
+const onClick_Favorite = () => {
+  router.push({ path: "/favorite" });
 };
 </script>
 
