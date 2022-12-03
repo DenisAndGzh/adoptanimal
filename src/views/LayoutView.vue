@@ -148,7 +148,7 @@ const doSearch = async (search: string) => {
       if (temp.length == 1) {
         router.push({ path: "/petinfo", query: { id: temp[0]["id"] } });
       } else {
-        Search.search = temp[0];
+        Search.search = temp;
         router.push("/search");
       }
       break;
@@ -162,7 +162,7 @@ const doSearch = async (search: string) => {
       if (temp.length == 1) {
         router.push({ path: "/petinfo", query: { id: temp[0]["id"] } });
       } else {
-        Search.search = temp[0];
+        Search.search = temp;
         router.push("/search");
       }
       break;
