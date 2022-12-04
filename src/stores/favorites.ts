@@ -57,7 +57,7 @@ export const useFavoriteStore = defineStore("favorites", {
       this.index.pop();
       this.count = this.count - 1;
       Notify.create({
-        position: "left",
+        position: "top",
         message: "Delect Successful!",
         color: "red",
       });
