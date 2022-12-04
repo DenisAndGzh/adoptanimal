@@ -64,10 +64,14 @@
     </div>
     <div class="col-2"></div>
   </div>
+  <div v-if="Favorites.index.length !== 0">
+    <MessageTable></MessageTable>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { useFavoriteStore } from "@/stores/favorites";
+import MessageTable from "../components/MessageTable.vue";
 const Favorites = useFavoriteStore();
 const click_delect = (index: number) => {
   Favorites.delect(index);

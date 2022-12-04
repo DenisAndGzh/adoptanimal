@@ -35,14 +35,14 @@ export const useFavoriteStore = defineStore("favorites", {
         this.index.push(this.count);
         this.count++;
         Notify.create({
-          position: "left",
+          position: "top",
           message: "Add Favorite Pet Successful!",
           color: "green",
         });
       } else {
         Notify.create({
-          position: "left",
-          message: "Favorite Pet Already Exist!",
+          position: "top",
+          message: "This Pet Already Exist!",
           color: "red",
         });
       }
