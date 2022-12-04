@@ -258,17 +258,21 @@
 
           <div>Added the ability to store favorite pets for users</div>
         </q-timeline-entry>
-        <q-timeline-entry>
-          <template v-slot:title>animal search function </template>
-          <template v-slot:subtitle> to be determined </template>
+        <q-timeline-entry icon="done_all">
+          <template v-slot:title>Animal Search Function </template>
+          <template v-slot:subtitle> December 4, 2022 </template>
 
-          <div>to be determined</div>
+          <div>Realized the function of searching by id, name and breed</div>
         </q-timeline-entry>
-        <q-timeline-entry>
-          <template v-slot:title>Join our page </template>
-          <template v-slot:subtitle> to be determined </template>
 
-          <div>to be determined</div>
+        <q-timeline-entry icon="done_all">
+          <template v-slot:title>Completed the coding phase </template>
+          <template v-slot:subtitle> December 4, 2022 </template>
+
+          <div>
+            Completed the coding phase. The next phase will be unit testing as
+            well as automated testing
+          </div>
         </q-timeline-entry>
       </q-timeline>
     </div>
