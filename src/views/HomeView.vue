@@ -2,7 +2,7 @@
   <div>
     <q-page-container>
       <q-page>
-        <q-parallax :height="400">
+        <q-parallax :height="450">
           <template v-slot:media>
             <video
               style="width: 100%; height: auto; position: relative; top: -250px"
@@ -37,10 +37,6 @@
                   <q-icon size="140px" name="pets" color="secondary" />
                   <div class="text-h6">Multiple Choices</div>
                 </q-card-section>
-
-                <q-card-section class="q-pt-none">
-                  We have a variety of pets for people to adopt.
-                </q-card-section>
               </q-card-section>
             </q-card>
           </div>
@@ -54,11 +50,7 @@
                   <q-icon size="140px" name="thumb_up" color="secondary" />
                   <div class="text-h6">Good Reputation</div>
                 </q-card-section>
-
-                <q-card-section class="q-pt-none">
-                  We have a solid reputation for pet adoption.
-                </q-card-section></q-card-section
-              >
+              </q-card-section>
             </q-card>
           </div>
           <div class="col">
@@ -74,11 +66,7 @@
                   />
                   <div class="text-h6">Non-Profit</div>
                 </q-card-section>
-
-                <q-card-section class="q-pt-none">
-                  We are a good non-profit organization.
-                </q-card-section></q-card-section
-              >
+              </q-card-section>
             </q-card>
           </div>
         </div>
