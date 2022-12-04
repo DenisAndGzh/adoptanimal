@@ -73,7 +73,6 @@ const Favorites = useFavoriteStore();
 const Search = useSearchStore();
 const router = useRouter();
 const click_info = async (id: string) => {
-  await router.replace("/");
   router.push({ path: "/petinfo", query: { id: id } });
 };
 const click_addfavorite = (id: string) => {

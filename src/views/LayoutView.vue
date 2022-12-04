@@ -144,8 +144,8 @@ const doSearch = async (search: string) => {
         message: "Name result found!",
         color: "green",
       });
-      await router.replace("/");
       if (temp.length == 1) {
+        await router.replace("/");
         router.push({ path: "/petinfo", query: { id: temp[0]["id"] } });
       } else {
         Search.search = temp;
@@ -158,8 +158,8 @@ const doSearch = async (search: string) => {
         message: "Breed result found!",
         color: "green",
       });
-      await router.replace("/");
       if (temp.length == 1) {
+        await router.replace("/");
         router.push({ path: "/petinfo", query: { id: temp[0]["id"] } });
       } else {
         Search.search = temp;
