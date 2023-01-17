@@ -15,6 +15,10 @@ export const useFavoriteStore = defineStore("favorites", {
       count: 0,
     };
   },
+  persist: {
+    key: "wuque-token",
+    storage: sessionStorage,
+  },
   getters: {},
   actions: {
     async addFavorite(id: string) {
