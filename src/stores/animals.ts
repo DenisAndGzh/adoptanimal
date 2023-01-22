@@ -48,7 +48,6 @@ export const useAnimalsStore = defineStore("animals", {
         } catch (e) {
           console.error(e);
         }
-        console.log(arr);
       }
       for (let i = 0; i < 6; i++) {
         this.id.push((await arr)?.data[i]["id"]);
@@ -66,7 +65,6 @@ export const useAnimalsStore = defineStore("animals", {
           console.error(e);
         }
       }
-      console.log(this.url);
     },
   },
 });

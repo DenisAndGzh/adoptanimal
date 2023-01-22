@@ -77,7 +77,6 @@ const click_info = async (id: string) => {
 };
 const click_addfavorite = (id: string) => {
   Favorites.addFavorite(id);
-  console.log(Favorites.id);
 };
 </script>
 
