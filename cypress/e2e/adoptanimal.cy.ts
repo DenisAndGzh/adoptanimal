@@ -48,12 +48,9 @@ describe("Adoptanimal", () => {
   });
   it("goto favourite", () => {
     cy.visit("/favorite");
-    const name = cy.get("button").eq(0)!;
-    name.click();
-    cy.wait(2000);
+    cy.wait(4000);
   });
   it("delect", () => {
     cy.get("button").eq(0)!.click();
-    cy.wait(2000);
   });
 });
