@@ -72,7 +72,6 @@ async function getPetInfo() {
 
 const click_addfavorite = () => {
   Favorites.addFavorite(pet["id"]);
-  console.log(Favorites.id);
 };
 interface pet_interface {
   id: string;
@@ -90,7 +89,6 @@ interface pet_interface {
 
 const pet = reactive((await getPetInfo())! as pet_interface);
 
-console.log(pet);
 </script>
 
 <style lang="scss" scoped>

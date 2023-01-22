@@ -261,7 +261,6 @@ const click_reflash = () => {
 };
 const click_addfavorite = (id: string) => {
   Favorites.addFavorite(id);
-  console.log(Favorites.id);
 };
 </script>
 

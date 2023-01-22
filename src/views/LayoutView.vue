@@ -122,12 +122,9 @@ const doSearch = async (search: string) => {
         ).data as string;
       } catch (e) {
         flag += 1;
-        console.log(e);
       }
     }
   }
-  console.log(temp);
-  console.log(flag);
   switch (flag) {
     case 0:
       Notify.create({
