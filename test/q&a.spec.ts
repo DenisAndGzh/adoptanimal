@@ -1,6 +1,6 @@
 import { shallowMount } from "@vue/test-utils";
 import { expect, test } from "vitest";
-import { setActivePinia, createPinia } from "pinia";
+import { createPinia } from "pinia";
 import piniaPluginPersistedstate from "pinia-plugin-persistedstate";
 import QandA from "../src/views/QuestionAndAnswerView.vue";
 

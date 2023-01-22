@@ -88,7 +88,6 @@ interface pet_interface {
 }
 
 const pet = reactive((await getPetInfo())! as pet_interface);
-
 </script>
 
 <style lang="scss" scoped>

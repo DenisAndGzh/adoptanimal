@@ -38,7 +38,6 @@ export const useFavoriteStore = defineStore("favorites", {
         this.color.push(pet["color"]);
         this.index.push(this.count);
         this.count++;
-        /* 
         Notify.create({
           position: "top",
           message: "Add Favorite Pet Successful!",
@@ -49,8 +48,7 @@ export const useFavoriteStore = defineStore("favorites", {
           position: "top",
           message: "This Pet Already Exist!",
           color: "red",
-        }); 
-        */
+        });
       }
     },
     delect(id: number) {
@@ -62,13 +60,11 @@ export const useFavoriteStore = defineStore("favorites", {
       this.color.splice(id, 1);
       this.index.pop();
       this.count = this.count - 1;
-      /* 
       Notify.create({
         position: "top",
         message: "Delect Successful!",
         color: "red",
-      }); 
-      */
+      });
     },
   },
 });
